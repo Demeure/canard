@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "canard/version"
-require 'rails'
 
 Gem::Specification.new do |s|
   s.name        = "canard"
@@ -20,6 +19,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.add_dependency 'rails'
+
   s.add_development_dependency "minitest", "~> 2"
   s.add_development_dependency "rails", "~> 3.2.3"
 
@@ -29,11 +30,6 @@ Gem::Specification.new do |s|
     s.add_development_dependency "mongoid", "~> 3.0"
   end
 
-  s.requirements << 'cancan for Rails3 and earlier or the Rails4 compatible cancancan fork.'
-  if Rails.version > '3'
-    s.add_runtime_dependency "cancancan"
-  else
-    s.add_runtime_dependency "cancan"
-  end
+  s.add_runtime_dependency "cancancan"
   s.add_runtime_dependency "role_model"
 end
