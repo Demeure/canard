@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency "minitest", "~> 2"
-  s.add_development_dependency "rails", "~> 3.2.3"
 
   if RUBY_VERSION < '1.9'
     s.add_development_dependency "mongoid", "~> 2.0"
@@ -28,6 +27,7 @@ Gem::Specification.new do |s|
     s.add_development_dependency "mongoid", "~> 3.0"
   end
 
+  s.add_runtime_dependency "rails", "~> 3.2.3"
   s.add_runtime_dependency "cancancan"
   s.add_runtime_dependency "role_model"
 end
