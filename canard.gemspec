@@ -28,6 +28,6 @@ Gem::Specification.new do |s|
   end
 
   s.add_runtime_dependency "rails", "~> 3.2.3"
-  s.add_runtime_dependency "cancancan"
+  s.add_runtime_dependency "cancancan", "~> 1.9.2"
   s.add_runtime_dependency "role_model"
 end
